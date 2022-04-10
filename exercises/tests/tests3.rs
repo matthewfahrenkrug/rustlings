@@ -22,9 +22,4 @@ mod tests {
     fn is_false_when_odd() {
         assert!(!is_even(5));
     }
-
-    #[test]
-    fn is_false_when_odd() {
-        assert!();
-    }
 }

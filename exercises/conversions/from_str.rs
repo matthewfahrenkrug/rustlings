@@ -46,6 +46,9 @@ impl FromStr for Person {
         }
         let s: Vec<&str> = s.split(",").collect();
         let name = s[0];
+        if name.len() == 0 {
+            return Err("Name length cannot be 0".to_string());
+        }
         let age = s[1].parse::<usize>().unwrap();
         Ok(Person { name:name.to_string(), age:age })
     }
